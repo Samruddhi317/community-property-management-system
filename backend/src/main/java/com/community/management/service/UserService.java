@@ -1,0 +1,56 @@
+
+package com.community.management.service;
+
+import com.community.management.entity.User;
+import com.community.management.exception.ResourceNotFoundException;
+import com.community.management.repository.UserRepository;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
+
+@Service
+@RequiredArgsConstructor
+@Transactional
+public class UserService {
+
+    private final UserRepository userRepository;
+
+    @Transactional(readOnly = true)
+    public List<User> getAll() {
+        return userRepository.findAll();
+    }
+
+    @Transactional(readOnly = true)
+    public User getById(Long id) {
+        return userRepository.findById(id)
+                .orElseThrow(() ->
+                        new ResourceNotFoundException(
+                                "User not found: " + id
+                        ));
+    }
+
+    public User update(Long id, User updated) {
+        User existing = getById(id);
+
+        existing.setFullName(updated.getFullName());
+        existing.setPhone(updated.getPhone());
+
+        return userRepository.save(existing);
+    }
+
+    // Deactivate user without deleting related records
+    public void deactivate(Long id) {
+        User existing = getById(id);
+        existing.setEnabled(false);
+        userRepository.save(existing);
+    }
+
+    // Reactivate user
+    public void activate(Long id) {
+        User existing = getById(id);
+        existing.setEnabled(true);
+        userRepository.save(existing);
+    }
+}

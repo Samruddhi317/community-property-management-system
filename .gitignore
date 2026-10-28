@@ -1,0 +1,35 @@
+__pycache__/
+*.pyc
+node_modules/
+.env
+.DS_Store
+target/
+
+
+
+# React build files
+frontend/build/
+frontend/dist/
+
+# Environment variables
+.env.*
+!.env.example
+
+# Java compiled files and logs
+*.class
+*.log
+
+# IDE files
+.idea/
+*.iml
+
+# OS files
+Thumbs.db
+
+# Local application configuration
+application-local.yml
+application-local.properties
+
+# Local secrets and environment files
+.env*
+!.env.example
