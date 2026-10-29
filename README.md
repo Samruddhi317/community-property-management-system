@@ -105,15 +105,11 @@ Ensure that the database connection settings in `backend/src/main/resources/appl
 
 Backend URL:
 
-```text
-http://localhost:8081
-```
+`http://localhost:8081`
 
 API base URL:
 
-```text
-http://localhost:8081/api
-```
+`http://localhost:8081/api`
 
 ### 4. Run the Frontend
 
@@ -126,9 +122,7 @@ npm start
 
 Open the application in your browser:
 
-```text
-http://localhost:3000
-```
+`http://localhost:3000`
 
 Ensure that the frontend API configuration points to the running backend.
 
@@ -156,43 +150,43 @@ Available operations depend on the application's configured authorization rules.
 
 The main dashboard provides an overview of the community and its information.
 
-![Dashboard](Screenshots/dashboard.png)
+![Dashboard](screenshots/dashboard.png)
 
 ### Dashboard — Announcements View
 
 Announcements are displayed within the same Dashboard page. This screenshot shows the announcements section of the dashboard, not a separate page.
 
-![Dashboard Announcements](Screenshots/announcement.png)
+![Dashboard Announcements](screenshots/announcement.png)
 
 ### Community Posts
 
 Create posts, participate in discussions, add comments, and manage posts.
 
-![Community Posts](Screenshots/posts.png)
+![Community Posts](screenshots/posts.png)
 
 ### User Management
 
 Manage community users according to their roles and permissions.
 
-![User Management](Screenshots/users.png)
+![User Management](screenshots/users.png)
 
 ### Maintenance Management
 
 Submit maintenance requests and manage maintenance-related operations.
 
-![Maintenance Management](Screenshots/maintenance.png)
+![Maintenance Management](screenshots/maintenance.png)
 
 ### Facility Bookings
 
 Create and view facility bookings and manage eligible booking actions.
 
-![Facility Bookings](Screenshots/bookings.png)
+![Facility Bookings](screenshots/bookings.png)
 
 ### Payment Records
 
 View payment records through the application's demo payment module.
 
-![Payment Records](Screenshots/payments.png)
+![Payment Records](screenshots/payments.png)
 
 ## Future Enhancements
 
