@@ -156,43 +156,43 @@ Available operations depend on the application's configured authorization rules.
 
 The main dashboard provides an overview of the community and its information.
 
-![Dashboard](screenshots/dashboard.png)
+![Dashboard](Screenshots/dashboard.png)
 
 ### Dashboard — Announcements View
 
 Announcements are displayed within the same Dashboard page. This screenshot shows the announcements section of the dashboard, not a separate page.
 
-![Dashboard Announcements](screenshots/announcement.png)
+![Dashboard Announcements](Screenshots/announcement.png)
 
 ### Community Posts
 
 Create posts, participate in discussions, add comments, and manage posts.
 
-![Community Posts](screenshots/posts.png)
+![Community Posts](Screenshots/posts.png)
 
 ### User Management
 
 Manage community users according to their roles and permissions.
 
-![User Management](screenshots/users.png)
+![User Management](Screenshots/users.png)
 
 ### Maintenance Management
 
 Submit maintenance requests and manage maintenance-related operations.
 
-![Maintenance Management](screenshots/maintenance.png)
+![Maintenance Management](Screenshots/maintenance.png)
 
 ### Facility Bookings
 
 Create and view facility bookings and manage eligible booking actions.
 
-![Facility Bookings](screenshots/bookings.png)
+![Facility Bookings](Screenshots/bookings.png)
 
 ### Payment Records
 
 View payment records through the application's demo payment module.
 
-![Payment Records](screenshots/payments.png)
+![Payment Records](Screenshots/payments.png)
 
 ## Future Enhancements
 
