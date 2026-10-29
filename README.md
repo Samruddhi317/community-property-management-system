@@ -4,14 +4,13 @@ A full-stack web application designed to simplify residential society management
 
 ## Features
 
-- **Authentication & Authorization:** Login, JWT-based authentication, and role-based access.
-- **Dashboard:** Community overview and activity summaries.
-- **Announcements:** Create, view, and manage society announcements.
+- **Authentication & Authorization:** Login, JWT-based authentication, and role-based access control.
+- **Dashboard & Announcements:** A centralized dashboard displaying community information and society announcements.
 - **Community Posts:** Create posts, add comments, edit posts, and delete posts.
-- **Maintenance Management:** Submit maintenance requests and manage their statuses.
-- **Facility Bookings:** Create bookings, view booking details, approve or reject requests, and cancel eligible bookings.
+- **Maintenance Management:** Submit maintenance requests and manage maintenance operations.
+- **Facility Bookings:** Create bookings, view booking details, and manage eligible booking cancellations.
 - **Payment Records:** View and manage payment records through a demo payment module.
-- **User Management:** Manage community users according to permissions.
+- **User Management:** Manage community users according to assigned permissions.
 - **Auto-Refresh:** Selected pages periodically refresh their displayed data.
 
 ## Technology Stack
@@ -40,7 +39,7 @@ The application follows a client-server architecture.
 ## Project Structure
 
 ```text
-community-property-management-main/
+community-property-management-system/
 ├── backend/
 │   ├── pom.xml
 │   └── src/
@@ -52,6 +51,14 @@ community-property-management-main/
 │   ├── package.json
 │   ├── public/
 │   └── src/
+├── screenshots/
+│   ├── dashboard.png
+│   ├── announcement.png
+│   ├── posts.png
+│   ├── users.png
+│   ├── maintenance.png
+│   ├── bookings.png
+│   └── payments.png
 └── README.md
 ```
 
@@ -70,14 +77,10 @@ Install the following software before running the application:
 
 ### 1. Clone the Repository
 
-After publishing this project to GitHub, clone it using:
-
 ```bash
-git clone YOUR_GITHUB_REPOSITORY_URL
-cd community-property-management-main
+git clone https://github.com/Samruddhi317/community-property-management-system.git
+cd community-property-management-system
 ```
-
-Replace `YOUR_GITHUB_REPOSITORY_URL` with your actual repository URL.
 
 ### 2. Configure the Database
 
@@ -87,29 +90,30 @@ Create the MySQL database:
 CREATE DATABASE community_db;
 ```
 
-Update the database connection settings in:
+Configure your MySQL username and password using the environment variables expected by the backend configuration.
 
-`backend/src/main/resources/application.yml`
+Ensure that the database connection settings in `backend/src/main/resources/application.yml` match your local environment.
 
-Use your own MySQL username and password. Never publish database passwords or JWT secrets in a public repository.
+**Security note:** Never commit database passwords, JWT secrets, or other sensitive credentials to a public repository.
 
 ### 3. Run the Backend
 
-Open the `backend` folder in IntelliJ IDEA and run the Spring Boot application.
+1. Open the `backend` folder in IntelliJ IDEA.
+2. Configure the required environment variables.
+3. Ensure that MySQL is running.
+4. Run the Spring Boot application.
 
-The backend is configured to use:
+Backend URL:
 
 ```text
 http://localhost:8081
 ```
 
-The API base URL is:
+API base URL:
 
 ```text
 http://localhost:8081/api
 ```
-
-Ensure that MySQL is running and the backend configuration matches your local database setup.
 
 ### 4. Run the Frontend
 
@@ -126,13 +130,13 @@ Open the application in your browser:
 http://localhost:3000
 ```
 
-Make sure the frontend API configuration points to the running backend.
+Ensure that the frontend API configuration points to the running backend.
 
 ## User Roles
 
 | Role | Responsibilities |
 |---|---|
-| Admin | Manage announcements, users, bookings, and relevant community operations |
+| Admin | Manage users, announcements, bookings, and relevant community operations |
 | Resident | View announcements, create posts, submit maintenance requests, book facilities, and access available payment records |
 | Staff | Access and manage assigned maintenance operations according to permissions |
 
@@ -143,7 +147,52 @@ Available operations depend on the application's configured authorization rules.
 - JWT-based authentication.
 - Role-based access control.
 - Protected backend endpoints.
-- Credential and secret management should be configured before public deployment.
+- Environment-based configuration for credentials and secrets.
+- Database credentials and JWT secrets should never be committed to a public repository.
+
+## Screenshots
+
+### Dashboard — Community Overview
+
+The main dashboard provides an overview of the community and its information.
+
+![Dashboard](screenshots/dashboard.png)
+
+### Dashboard — Announcements View
+
+Announcements are displayed within the same Dashboard page. This screenshot shows the announcements section of the dashboard, not a separate page.
+
+![Dashboard Announcements](screenshots/announcement.png)
+
+### Community Posts
+
+Create posts, participate in discussions, add comments, and manage posts.
+
+![Community Posts](screenshots/posts.png)
+
+### User Management
+
+Manage community users according to their roles and permissions.
+
+![User Management](screenshots/users.png)
+
+### Maintenance Management
+
+Submit maintenance requests and manage maintenance-related operations.
+
+![Maintenance Management](screenshots/maintenance.png)
+
+### Facility Bookings
+
+Create and view facility bookings and manage eligible booking actions.
+
+![Facility Bookings](screenshots/bookings.png)
+
+### Payment Records
+
+View payment records through the application's demo payment module.
+
+![Payment Records](screenshots/payments.png)
 
 ## Future Enhancements
 
@@ -152,10 +201,6 @@ Available operations depend on the application's configured authorization rules.
 - Cloud deployment.
 - Automated unit and integration testing.
 - Enhanced reports and analytics.
-
-## Screenshots
-
-Screenshots of the Dashboard, Announcements, Bookings, Maintenance, Posts, and Payments pages can be added here.
 
 ## Author
 
